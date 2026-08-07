@@ -1,50 +1,127 @@
-# Welcome to your Expo app 👋
+# 🏡 Nestora
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Nestora is a modern full-stack cross-platform real estate mobile application built with React Native and Expo. It allows users to discover, search, filter, and save properties with a clean and intuitive user experience.
 
-## Get started
+## ✨ Features
 
-1. Install dependencies
+- 🔐 User Authentication
+- 🏠 Browse Properties
+- 🔍 Search Properties
+- 🎯 Advanced Filters
+- ❤️ Save Favorite Properties
+- 🗺️ Interactive Property Map
+- 📱 Responsive Mobile UI
+- ☁️ Real-time Backend with Supabase
+- ⚡ Fast State Management with Zustand
 
-   ```bash
-   npm install
-   ```
+## 📱 Screens
 
-2. Start the app
+- Home
+- Search
+- Property Details
+- Saved Properties
+- Profile
+- Create Property
+- Map View
+- Authentication
 
-   ```bash
-   npx expo start
-   ```
+## 🛠 Tech Stack
 
-In the output, you'll find options to open the app in a
+### Frontend
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- React Native
+- Expo
+- TypeScript
+- NativeWind
+- Expo Router
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Backend
 
-## Get a fresh project
+- Supabase
+- PostgreSQL
+- Authentication
+- Storage
 
-When you're ready, run:
+### State Management
 
-```bash
-npm run reset-project
+- Zustand
+
+## 📂 Project Structure
+
+```
+app/
+components/
+hooks/
+lib/
+store/
+constants/
+assets/
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🚀 Installation
 
-## Learn more
+Clone the repository
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+git clone https://github.com/pritam-006/nestora.git
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Navigate into the project
 
-## Join the community
+```bash
+cd nestora
+```
 
-Join our community of developers creating universal apps.
+Install dependencies
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npx expo start
+```
+
+Run on Android
+
+```bash
+npx expo run:android
+```
+
+## 📸 Screenshots
+
+Add screenshots here after completing the UI.
+
+Example:
+
+```
+assets/screenshots/home.png
+assets/screenshots/search.png
+assets/screenshots/details.png
+```
+
+## 🎯 Future Improvements
+
+- Push Notifications
+- Property Chat
+- Video Property Tours
+- Mortgage Calculator
+- AI Property Recommendations
+- Dark Mode
+- Property Reviews
+
+## 👨‍💻 Author
+
+Pritam Das
+
+Full Stack Web and Mobile App Developer
+
+LinkedIn: www.linkedin.com/in/pritam-das-52221b300
+
+Email: pritamdas6748@gmail.com
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
