@@ -1,30 +1,19 @@
+import { useUserStore } from "@/store/userStore";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+import { Icon, Label, NativeTabs } from "expo-router/unstable-native-tabs";
+import { Platform } from "react-native";
 
 function TabIcon({ name, color, size }) {
   return <Ionicons name={name} size={size} color={color} />;
 }
 
-export default function TabLayout() {
+function AndroidTabs() {
+  const isAdmin = useUserStore((state) => state.isAdmin);
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: "#2563eb",
-        tabBarInactiveTintColor: "#94a3b8",
-        tabBarStyle: {
-          height: 70,
-          paddingBottom: 15,
-          paddingTop: 8,
-          backgroundColor: "#ffffff",
-          borderTopWidth: 1,
-          borderTopColor: "#e2e8f0",
-          shadowColor: "#000",
-          shadowOpacity: 0.06,
-          shadowRadius: 8,
-          shadowOffset: { width: 0, height: -2 },
-          elevation: 6,
-        },
       }}
     >
       <Tabs.Screen
@@ -42,6 +31,17 @@ export default function TabLayout() {
           title: "Search",
           tabBarIcon: ({ color, size }) => (
             <TabIcon name="search" color={color} size={size} />
+          ),
+        }}
+      />
+      {/* Create Property Tab */}
+      <Tabs.Screen
+        name="create"
+        options={{
+          title: "Add",
+          href: isAdmin ? undefined : null,
+          tabBarIcon: ({ color, size }) => (
+            <TabIcon name="add-circle" color={color} size={size} />
           ),
         }}
       />
@@ -65,4 +65,42 @@ export default function TabLayout() {
       />
     </Tabs>
   );
+}
+
+function IOSTabs() {
+  const isAdmin = useUserStore((state) => state.isAdmin);
+  return (
+    <NativeTabs>
+      <NativeTabs.Trigger name="index">
+        <Icon sf="house.fill" />
+        <Label>Home</Label>
+      </NativeTabs.Trigger>
+
+      <NativeTabs.Trigger name="search">
+        <Icon sf="magnifyingglass" />
+        <Label>Search</Label>
+      </NativeTabs.Trigger>
+
+      {isAdmin && (
+        <NativeTabs.Trigger name="create">
+          <Icon sf="plus.circle.fill" />
+          <Label>Add Property</Label>
+        </NativeTabs.Trigger>
+      )}
+
+      <NativeTabs.Trigger name="saved">
+        <Icon sf="heart.fill" />
+        <Label>Saved</Label>
+      </NativeTabs.Trigger>
+
+      <NativeTabs.Trigger name="profile">
+        <Icon sf="person.fill" />
+        <Label>Profile</Label>
+      </NativeTabs.Trigger>
+    </NativeTabs>
+  );
+}
+
+export default function TabsLayout() {
+  return Platform.OS === "ios" ? <IOSTabs /> : <AndroidTabs />;
 }
