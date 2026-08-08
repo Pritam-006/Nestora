@@ -78,7 +78,7 @@ export default function SignInScreen() {
     return (
       <View className="flex-1 justify-center items-center bg-white px-6">
         <Image
-          source={require("../../assets/images/kribb.png")}
+          source={require("../../assets/images/nestora-logo.png")}
           className="w-32 h-16 mb-8"
           resizeMode="contain"
         />
@@ -134,8 +134,8 @@ export default function SignInScreen() {
     >
       <View className="flex-1 justify-center px-6 py-12">
         <Image
-          source={require("../../assets/images/kribb.png")}
-          className="w-36 h-16 mb-8"
+          source={require("../../assets/images/nestora-logo.png")}
+          className="w-32 h-16 mb-8"
           resizeMode="contain"
         />
         <Text className="text-3xl font-bold text-gray-800 mb-2">
